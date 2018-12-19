@@ -1,4 +1,4 @@
-package io.github.julianjupiter.springbootandangular.server.domain;
+package io.github.julianjupiter.springbootandangular.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

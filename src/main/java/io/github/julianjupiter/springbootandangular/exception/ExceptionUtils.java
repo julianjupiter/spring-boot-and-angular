@@ -1,4 +1,4 @@
-package io.github.julianjupiter.springbootandangular.server.exception;
+package io.github.julianjupiter.springbootandangular.exception;
 
 import org.springframework.context.MessageSource;
 import org.springframework.validation.BindingResult;

@@ -1,10 +1,10 @@
-package io.github.julianjupiter.springbootandangular.server.controller;
+package io.github.julianjupiter.springbootandangular.controller;
 
-import io.github.julianjupiter.springbootandangular.server.domain.Hero;
-import io.github.julianjupiter.springbootandangular.server.exception.ExceptionUtils;
-import io.github.julianjupiter.springbootandangular.server.exception.ResourceNotFoundException;
-import io.github.julianjupiter.springbootandangular.server.exception.ValidationException;
-import io.github.julianjupiter.springbootandangular.server.service.HeroService;
+import io.github.julianjupiter.springbootandangular.domain.Hero;
+import io.github.julianjupiter.springbootandangular.exception.ExceptionUtils;
+import io.github.julianjupiter.springbootandangular.exception.ResourceNotFoundException;
+import io.github.julianjupiter.springbootandangular.exception.ValidationException;
+import io.github.julianjupiter.springbootandangular.service.HeroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;

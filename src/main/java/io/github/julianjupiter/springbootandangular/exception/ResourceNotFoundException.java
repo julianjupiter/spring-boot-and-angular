@@ -1,4 +1,4 @@
-package io.github.julianjupiter.springbootandangular.server.exception;
+package io.github.julianjupiter.springbootandangular.exception;
 
 public class ResourceNotFoundException extends ApiException {
     public ResourceNotFoundException(String message, String path) {

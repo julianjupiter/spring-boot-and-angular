@@ -1,4 +1,4 @@
-package io.github.julianjupiter.springbootandangular.server.exception;
+package io.github.julianjupiter.springbootandangular.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;

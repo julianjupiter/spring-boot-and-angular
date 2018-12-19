@@ -1,4 +1,4 @@
-package io.github.julianjupiter.springbootandangular.server.controller;
+package io.github.julianjupiter.springbootandangular.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

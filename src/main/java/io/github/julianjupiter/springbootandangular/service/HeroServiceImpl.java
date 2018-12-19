@@ -1,7 +1,7 @@
-package io.github.julianjupiter.springbootandangular.server.service;
+package io.github.julianjupiter.springbootandangular.service;
 
-import io.github.julianjupiter.springbootandangular.server.domain.Hero;
-import io.github.julianjupiter.springbootandangular.server.repository.HeroRepository;
+import io.github.julianjupiter.springbootandangular.domain.Hero;
+import io.github.julianjupiter.springbootandangular.repository.HeroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

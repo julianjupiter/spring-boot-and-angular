@@ -1,6 +1,6 @@
-package io.github.julianjupiter.springbootandangular.server.service;
+package io.github.julianjupiter.springbootandangular.service;
 
-import io.github.julianjupiter.springbootandangular.server.domain.Hero;
+import io.github.julianjupiter.springbootandangular.domain.Hero;
 
 import java.util.Optional;
 
