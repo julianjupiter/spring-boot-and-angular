@@ -1,0 +1,22 @@
+/* DashboardComponent's private CSS styles */
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  max-height: 120px;
+  min-width: 120px;
+}
+
+.hero:hover {
+  background-color: #f8f9fa !important
+}
+
+.hero h4 {
+  color: #eee;
+}
+
+a:hover .hero h4 {
+  color: #007bff !important
+}

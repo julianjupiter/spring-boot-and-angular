@@ -1,0 +1,19 @@
+<div *ngIf="hero">
+  <div class="row justify-content-md-center">
+    <div class="col-12">
+      <h2 class="text-center text-success my-3">{{ hero.name | uppercase }} Details</h2>
+    </div>
+    <div class="col-lg-6 col-sm-6">
+      <div class="form-group">
+        <label for="exampleInputEmail1">ID</label>
+        <input class="form-control rounded-0 border border-primary bg-white shadow-none text-primary" value="{{ hero.id }}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input class="form-control rounded-0 border border-primary bg-white shadow-none text-primary" id="heroName" [(ngModel)]="hero.name" placeholder="Name">
+      </div>
+      <button class="btn btn-outline-primary mr-2 rounded-0" (click)="goBack()">go back</button>
+      <button class="btn btn-primary rounded-0" (click)="save()">save</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col text-center">
+    <h4 class="text-success my-3">Hero Search</h4>
+      <input #searchBox id="search-box" class="form-control col-lg-6 col-sm-12 mx-auto rounded-0 shadow-none text-primary" (input)="search(searchBox.value)" placeholder="Search hero..." />
+    <ul class="search-result col-lg-6 col-sm-12 mx-auto px-0">
+      <li *ngFor="let hero of (heroes$ | async)" class="text-left p-2 bg-white">
+        <a routerLink="/detail/{{hero.id}}" class="text-primary"> {{ hero.name }} </a>
+      </li>
+    </ul>
+  </div>
+</div>

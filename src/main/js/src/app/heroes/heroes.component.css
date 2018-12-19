@@ -1,0 +1,44 @@
+/* HeroesComponent's private CSS styles */
+
+.heroes {
+  list-style-type: none;
+}
+
+.heroes li {
+  cursor: pointer;
+  margin: 0.5em;
+  padding: 0.3em 0;
+  height: 2.4rem;
+  border-radius: 4px;
+}
+
+.heroes li:hover {
+  left: 0.1em;
+}
+
+.heroes a {
+  text-decoration: none;
+  width: 250px;
+}
+
+.heroes a:hover {
+  color: #007bff;
+}
+
+.heroes .badge {
+  font-size: small;
+  padding: 0.8em 0.7em 0 0.7em;
+  line-height: 1em;
+  left: -1px;
+  top: -5px;
+  height: 2.3rem;
+  min-width: 16px;
+  margin-right: 0.8em;
+  border-radius: 4px 0 0 4px;
+}
+
+button.delete {
+  top: -38px;
+  height: 1.8rem;
+  line-height: 0.5;
+}
