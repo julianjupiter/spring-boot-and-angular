@@ -9,7 +9,7 @@ git clone https://github.com/julianjupiter/spring-boot-and-angular
  - Windows
  ```
  .\mvnw.cmd package
- java -jar .\target/spring-boot-and-angular-0.0.1-SNAPSHOT.jar
+ java -jar .\target\spring-boot-and-angular-0.0.1-SNAPSHOT.jar
  ```
  - GNU/Linux, UNIX
  ```
