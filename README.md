@@ -1,5 +1,5 @@
 # Spring Boot and Angular
-Modified Google's Tour of Heroes Angular application with Spring Boot
+Modified Google's Tour of Heroes Angular application. Mocked web services were replaced with real ones created in Spring Boot.
 
 ## Clone
 ```
