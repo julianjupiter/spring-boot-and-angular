@@ -25,7 +25,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/heroes")
-@CrossOrigin(origins = { "http://localhost:8090", "http://localhost:4200" }, maxAge = 3000)
+@CrossOrigin(origins = { "http://localhost:8091", "http://localhost:4200" }, maxAge = 3000)
 public class HeroController {
     private HeroService heroService;
     @Autowired

@@ -4,5 +4,5 @@ import io.github.julianjupiter.springbootandangular.domain.Hero;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface HeroRepository extends JpaRepository<Hero, Long> {
-    Iterable<Hero> findByNameContaining(String name);
+    Iterable<Hero> findByNameContainingIgnoreCase(String name);
 }

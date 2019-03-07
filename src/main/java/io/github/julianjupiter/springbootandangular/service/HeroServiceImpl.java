@@ -26,7 +26,7 @@ public class HeroServiceImpl implements HeroService {
 
     @Override
     public Iterable<Hero> findByName(String name) {
-        return heroRepository.findByNameContaining(name);
+        return heroRepository.findByNameContainingIgnoreCase(name);
     }
 
     @Override

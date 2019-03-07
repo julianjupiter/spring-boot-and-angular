@@ -1,7 +1,0 @@
-<div class="row" *ngIf="messageService.messages.length">
-  <div class="col">
-    <h2>Messages</h2>
-    <button class="btn btn-outline-secondary rounded-0 btn-sm text-dark" (click)="messageService.clear()">clear</button>
-    <div *ngFor="let message of messageService.messages"><span class="badge badge-primary">{{ message }}</span></div>
-  </div>
-</div>

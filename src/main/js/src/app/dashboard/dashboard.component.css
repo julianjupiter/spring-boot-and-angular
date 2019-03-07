@@ -10,7 +10,7 @@ a {
 }
 
 .hero:hover {
-  background-color: #f8f9fa !important
+  background-color: #f8f9fa !important;
 }
 
 .hero h4 {
@@ -18,5 +18,5 @@ a {
 }
 
 a:hover .hero h4 {
-  color: #007bff !important
+  color: #007bff !important;
 }
