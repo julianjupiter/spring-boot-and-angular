@@ -4,6 +4,14 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none !important;
+}
+
+a:hover .hero h4 {
+  color: #007bff !important;
+}
+
 .hero {
   max-height: 120px;
   min-width: 120px;
@@ -15,8 +23,4 @@ a {
 
 .hero h4 {
   color: #eee;
-}
-
-a:hover .hero h4 {
-  color: #007bff !important;
 }

@@ -31,14 +31,14 @@
   line-height: 1em;
   left: -1px;
   top: -5px;
-  height: 2.3rem;
+  height: 2.4rem;
   min-width: 16px;
   margin-right: 0.8em;
   border-radius: 4px 0 0 4px;
 }
 
 button.delete {
-  top: -38px;
+  top: -39px;
   height: 1.8rem;
   line-height: 0.5;
 }
