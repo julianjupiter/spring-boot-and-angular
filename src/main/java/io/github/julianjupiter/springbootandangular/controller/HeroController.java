@@ -31,7 +31,6 @@ public class HeroController {
     @Autowired
     private MessageSource messageSource;
 
-    @Autowired
     public HeroController(HeroService heroService) {
         this.heroService = heroService;
     }
