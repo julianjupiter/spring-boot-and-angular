@@ -58,7 +58,7 @@ public class HeroController {
     @GetMapping("/{id}")
     public Hero findById(@PathVariable long id) throws Exception {
         return heroService.findById(id)
-                .orElseThrow(() -> new Exception("Hero with ID " + id + " not found."));
+                .orElseThrow(() -> new ResourceNotFoundException("Hero with ID " + id + " was not found", ExceptionUtils.path(id)));
     }
 
     @PutMapping("/{id}")
