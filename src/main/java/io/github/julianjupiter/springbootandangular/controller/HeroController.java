@@ -1,6 +1,8 @@
 package io.github.julianjupiter.springbootandangular.controller;
 
-import io.github.julianjupiter.springbootandangular.domain.Hero;
+import io.github.julianjupiter.springbootandangular.dto.HeroDto;
+import io.github.julianjupiter.springbootandangular.dto.HeroRequestDto;
+import io.github.julianjupiter.springbootandangular.entity.Hero;
 import io.github.julianjupiter.springbootandangular.exception.ExceptionUtils;
 import io.github.julianjupiter.springbootandangular.exception.ResourceNotFoundException;
 import io.github.julianjupiter.springbootandangular.exception.ValidationException;
@@ -36,7 +38,7 @@ public class HeroController {
     }
 
     @GetMapping
-    public Iterable<Hero> findAll(@RequestParam(value = "name", required = false) String name) {
+    public Iterable<HeroDto> findAll(@RequestParam(value = "name", required = false) String name) {
         if (name != null && !name.isEmpty()) {
             return heroService.findByName(name);
         }
@@ -45,31 +47,29 @@ public class HeroController {
     }
 
     @PostMapping
-    public ResponseEntity<Hero> create(@Valid @RequestBody Hero hero, BindingResult bindingResult) throws ValidationException {
+    public ResponseEntity<HeroDto> create(@Valid @RequestBody HeroRequestDto heroRequestDto, BindingResult bindingResult) throws ValidationException {
         if (bindingResult.hasErrors()) {
             ExceptionUtils.invalid(bindingResult, messageSource, ExceptionUtils.path());
         }
 
-        heroService.save(hero);
-
-        return new ResponseEntity<>(hero, HttpStatus.CREATED);
+        return new ResponseEntity<>(heroService.save(heroRequestDto, 0), HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
-    public Hero findById(@PathVariable long id) throws Exception {
+    public HeroDto findById(@PathVariable long id) throws Exception {
         return heroService.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Hero with ID " + id + " was not found", ExceptionUtils.path(id)));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Hero> update(@PathVariable long id, @Valid @RequestBody Hero hero, BindingResult bindingResult) throws ValidationException, ResourceNotFoundException {
+    public ResponseEntity<Hero> update(@PathVariable long id, @Valid @RequestBody HeroRequestDto heroRequestDto, BindingResult bindingResult) throws ValidationException, ResourceNotFoundException {
         if (bindingResult.hasErrors()) {
             ExceptionUtils.invalid(bindingResult, messageSource, ExceptionUtils.path());
         }
 
         return heroService.findById(id)
                 .map(foundHero -> {
-                    heroService.save(hero);
+                    heroService.save(heroRequestDto, id);
                     return new ResponseEntity(HttpStatus.OK);
                 })
                 .orElseThrow(() -> new ResourceNotFoundException("Hero with ID " + id + " was not found", ExceptionUtils.path(id)));
