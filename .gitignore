@@ -24,7 +24,48 @@
 /.nb-gradle/
 
 ### NodeJS
-/src/main/js/.sonarlint/
-/src/main/js/dist/
-/src/main/js/node/
-/src/main/js/node_modules/
+# compiled output
+/src/main/js/dist
+/src/main/js/tmp
+/src/main/js/out-tsc
+# Only exists if Bazel was run
+/src/main/js/bazel-out
+
+# dependencies
+/src/main/js/node_modules
+/src/main/js/node
+
+# profiling files
+/src/main/js/chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+/src/main/js/.idea
+/src/main/js/.project
+/src/main/js/.classpath
+/src/main/js/.c9/
+/src/main/js/*.launch
+/src/main/js/.settings/
+/src/main/js/*.sublime-workspace
+
+# IDE - VSCode
+/src/main/js/.vscode/*
+!/src/main/js/.vscode/settings.json
+!/src/main/js/.vscode/tasks.json
+!/src/main/js/.vscode/launch.json
+!/src/main/js/.vscode/extensions.json
+/src/main/js/.history/*
+
+# misc
+/src/main/js/.sass-cache
+/src/main/js/connect.lock
+/src/main/js/coverage
+/src/main/js/libpeerconnection.log
+/src/main/js/npm-debug.log
+/src/main/js/yarn-error.log
+/src/main/jstestem.log
+/src/main/js/typings
+
+# System Files
+/src/main/js/.DS_Store
+/src/main/js/Thumbs.db
